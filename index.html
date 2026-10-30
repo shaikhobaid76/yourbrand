@@ -1184,14 +1184,24 @@ html, body { width:100% !important; margin:0 !important; padding:0 !important; o
     <span class="badge">Process</span>
     <h2 class="section-title">From Your Logo To Your Bottle.</h2>
     
-    <div class="steps-grid">
-      <div class="step-card" data-delay="0"><div class="num">01</div><h4>Share Your Brand</h4><p>Send us your logo and brand details.</p></div>
-      <div class="step-card" data-delay="100"><div class="num">02</div><h4>We Design</h4><p>Our team creates a professional bottle label based on your brand.</p></div>
-      <div class="step-card" data-delay="200"><div class="num">03</div><h4>You Approve</h4><p>Review the design before production.</p></div>
-      <div class="step-card" data-delay="300"><div class="num">04</div><h4>Produce & Deliver</h4><p>Your branded bottles are prepared and delivered.</p></div>
-    </div>
-
-    <div class="transformation-wrapper">
+    <div class="process-agenda" aria-label="Our four-step process">
+      <article class="process-point process-point-1">
+        <div class="process-number">01<span class="process-rule"></span></div>
+        <div class="process-copy"><h4>SHARE YOUR BRAND</h4><p>Send us your logo and brand details to get started.</p></div>
+      </article>
+      <article class="process-point process-point-2">
+        <div class="process-number">02<span class="process-rule"></span></div>
+        <div class="process-copy"><h4>WE DESIGN</h4><p>We create a professional label that reflects your brand.</p></div>
+      </article>
+      <article class="process-point process-point-3">
+        <div class="process-number">03<span class="process-rule"></span></div>
+        <div class="process-copy"><h4>YOU APPROVE</h4><p>Review and approve the final design before production.</p></div>
+      </article>
+      <article class="process-point process-point-4">
+        <div class="process-number">04<span class="process-rule"></span></div>
+        <div class="process-copy"><h4>PRODUCE &amp; DELIVER</h4><p>Your custom-branded bottles are prepared and delivered.</p></div>
+      </article>
+    </div><div class="transformation-wrapper">
       <h3>From Generic To Recognizable.</h3>
       <p class="sub">See the difference a professional brand label makes.</p>
       <div class="ba-grid">
@@ -1310,6 +1320,14 @@ html, body { width:100% !important; margin:0 !important; padding:0 !important; o
     <div style="text-align:center;margin-top:32px;"><a href="#configure" class="btn-primary">Create Something Like This</a></div>
   </div>
 </section>
+
+<!-- Our Vision -->
+<section id="vision" aria-label="Our Vision">
+  <div class="vision-inner">
+    <h2>Akkha Mumbai Pe Raaj Karna Hai</h2>
+  </div>
+</section>
+
 
 <!-- About / Founder - Flip Card with light cream back and big logo -->
 <section class="section" id="about">
@@ -1557,6 +1575,170 @@ html, body { width:100% !important; margin:0 !important; padding:0 !important; o
   window.addEventListener('load', handleScrollAnimations);
   setTimeout(handleScrollAnimations, 500);
 </script>
+
+<style id="requested-process-vision-hero-final">
+/* Four-point agenda: same staggered editorial layout as the reference,
+   recoloured to YourBrand's cream and green palette. */
+#how .process-agenda {
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:22px;
+  margin:48px 0 58px;
+  align-items:start;
+}
+#how .process-point {
+  position:relative;
+  min-height:190px;
+  padding:0 18px 24px 0;
+  text-align:left;
+  opacity:0;
+  transform:translateY(24px);
+  animation:processPointIn .7s ease forwards;
+}
+#how .process-point:nth-child(2) { margin-top:58px; animation-delay:.10s; }
+#how .process-point:nth-child(3) { margin-top:0; animation-delay:.20s; }
+#how .process-point:nth-child(4) { margin-top:58px; animation-delay:.30s; }
+#how .process-point:not(:last-child)::after {
+  content:"";
+  position:absolute;
+  top:5px;
+  right:0;
+  width:2px;
+  height:148px;
+  background:linear-gradient(to bottom,#006B4F,rgba(23,79,58,.24));
+}
+#how .process-number {
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  color:#006B4F;
+  font-size:clamp(3.2rem,6vw,5rem);
+  font-weight:800;
+  letter-spacing:-.07em;
+  line-height:.95;
+  white-space:nowrap;
+}
+#how .process-point:nth-child(2) .process-number { color:#A66A50; }
+#how .process-point:nth-child(3) .process-number { color:#4B9B83; }
+#how .process-point:nth-child(4) .process-number { color:#174F3A; }
+#how .process-rule { display:none; }
+#how .process-copy { margin-top:14px; max-width:190px; }
+#how .process-copy h4 {
+  color:#006B4F;
+  font-size:.88rem;
+  font-weight:800;
+  letter-spacing:.09em;
+  line-height:1.35;
+  margin:0 0 8px;
+}
+#how .process-point:nth-child(2) .process-copy h4 { color:#A66A50; }
+#how .process-point:nth-child(3) .process-copy h4 { color:#4B9B83; }
+#how .process-point:nth-child(4) .process-copy h4 { color:#174F3A; }
+#how .process-copy p { color:#35594B; font-size:.78rem; line-height:1.55; margin:0; }
+@keyframes processPointIn { to { opacity:1; transform:translateY(0); } }
+
+/* Vision: edge-to-edge, full viewport, in the existing brand colours. */
+#vision {
+  width:100vw !important;
+  max-width:none !important;
+  min-height:100vh !important;
+  min-height:100svh !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden;
+  background:#006B4F !important;
+  color:#FEFAEB !important;
+}
+#vision .vision-inner {
+  width:100%;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:48px 7vw;
+  text-align:center;
+}
+#vision h2 {
+  max-width:1100px;
+  margin:0;
+  color:#FEFAEB !important;
+  font-size:clamp(3rem,8.5vw,7.5rem);
+  line-height:1.04;
+  letter-spacing:-.055em;
+  font-weight:800;
+}
+
+/* Hero carousel: remove the visible card panel completely.
+   Keep the image itself transparent-friendly for background-removed PNGs. */
+#home .hero-carousel,
+#home .hero-carousel .carousel-wrapper,
+#home .hero-carousel .carousel-track,
+#home .hero-carousel .carousel-slide,
+#home .hero-carousel .big-card {
+  background:transparent !important;
+  border:0 !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+  outline:0 !important;
+}
+#home .hero-carousel .carousel-wrapper {
+  border-radius:0 !important;
+  overflow:hidden !important;
+}
+#home .hero-carousel .carousel-slide { padding:0 !important; }
+#home .hero-carousel .big-card {
+  border-radius:0 !important;
+  padding:0 !important;
+  overflow:visible !important;
+}
+#home .hero-carousel .big-card img {
+  display:block !important;
+  width:100% !important;
+  height:340px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+#home .hero-carousel .big-card h3,
+#home .hero-carousel .big-card p {
+  background:transparent !important;
+  box-shadow:none !important;
+}
+@media(max-width:900px) {
+  #how .process-agenda { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 22px; }
+  #how .process-point:nth-child(2), #how .process-point:nth-child(4) { margin-top:42px; }
+  #how .process-point:nth-child(2)::after { display:none; }
+  #how .process-point:nth-child(3) { margin-top:0; }
+}
+@media(max-width:520px) {
+  #how .process-agenda { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 14px; margin:34px 0 42px; }
+  #how .process-point { min-height:170px; padding-right:10px; }
+  #how .process-point:nth-child(2), #how .process-point:nth-child(4) { margin-top:34px; }
+  #how .process-point:not(:last-child)::after { height:116px; right:0; }
+  #how .process-point:nth-child(2)::after { display:none; }
+  #how .process-number { font-size:clamp(2.8rem,13vw,4rem); }
+  #how .process-copy { margin-top:12px; max-width:150px; }
+  #how .process-copy h4 { font-size:.72rem; letter-spacing:.055em; }
+  #how .process-copy p { font-size:.72rem; }
+  #vision, #vision .vision-inner { min-height:100svh !important; }
+  #vision .vision-inner { padding:36px 22px; }
+  #vision h2 { font-size:clamp(2.8rem,12vw,4.5rem); }
+  #home .hero-carousel .big-card img { height:230px !important; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #how .process-point { animation:none; opacity:1; transform:none; }
+}
+</style>
+
 </body>
 </html>
 <style id="latest-visual-fixes">
